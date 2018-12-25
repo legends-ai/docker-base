@@ -10,7 +10,7 @@ RUN \
     software-properties-common
 
 ENV SCALA_VERSION 2.12.4
-ENV SBT_VERSION 0.13.18
+ENV SBT_VERSION 0.13.17
 
 # Scala expects this file
 RUN touch /usr/lib/jvm/java-8-openjdk-amd64/release
