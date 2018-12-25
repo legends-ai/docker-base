@@ -9,7 +9,7 @@ RUN \
     curl \
     software-properties-common
 
-ENV SCALA_VERSION 2.12.6
+ENV SCALA_VERSION 2.12.4
 ENV SBT_VERSION 0.13.18
 
 # Scala expects this file
@@ -33,7 +33,7 @@ RUN \
 # Configure sbt s3 resolver
 RUN \
   mkdir -p /root/.sbt/0.13/plugins && \
-  echo "addSbtPlugin("com.frugalmechanic" % "fm-sbt-s3-resolver" % "0.16.0")" >> /root/.sbt/0.13/plugins/plugins.sbt
+  echo 'addSbtPlugin("com.frugalmechanic" % "fm-sbt-s3-resolver" % "0.16.0")' >> /root/.sbt/0.13/plugins/plugins.sbt
 
 # Install docker
 RUN \
