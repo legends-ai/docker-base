@@ -1,5 +1,7 @@
 FROM openjdk:8u171
 
+ARG az_sp_credentials
+
 # Install base packages
 RUN \
   apt-get update && \
@@ -47,3 +49,6 @@ RUN \
 
 # Define working directory
 WORKDIR /asuna
+
+# Copy Azure Service Principal Credentials file
+COPY $az_sp_credentials /asuna/az-sp-credentials
